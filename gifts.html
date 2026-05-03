@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/gifts</title>
+    <style>
+        .gift-section {
+
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #ffe6f0, #e6ecff);
+
+            text-align: center;
+
+            font-family: Poppins;
+
+        }
+
+
+        .gift-section h1 {
+
+            font-size: 48px;
+            color: #ff4da6;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .gift-box {
+
+            font-size: 120px;
+
+            cursor: pointer;
+
+            transition: .4s;
+
+            animation: float 2s infinite ease-in-out;
+
+        }
+
+
+        .gift-box:hover {
+
+            transform: scale(1.2) rotate(10deg);
+
+        }
+
+
+        #gifts {
+
+            margin-top: 20px;
+
+        }
+
+
+        #gift-result {
+
+            margin-top: 30px;
+
+            font-size: 24px;
+
+            color: #444;
+
+            width: 60%;
+
+            transition: .4s;
+
+        }
+
+
+        /* floating animation */
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+
+        }
+
+        .home-btn {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            z-index: 999;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            padding: 5px 5px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .home-btn:hover {
+            background-color: rgb(222, 243, 169);
+            border-radius: 20px;
+            border-radius: 2px solid black;
+            box-shadow: 0px 10px 20px black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="home-btn" onclick="window.location.href='index.html'">⬅️Home</button>
+    <section class="gift-section">
+
+        <h1>Open Your Surprise 🎁</h1>
+
+        <div class="gift-box" onclick="openGift()">
+            🎁
+        </div>
+
+        <p id="gift-result">
+            Click the gift box to reveal your surprise ❤️
+        </p>
+
+    </section>
+    <script>
+        function openGift() {
+
+            let surprises = ["🍫 Chocolate Treat Date with me!",
+                "🎬 Movie Night Together!",
+                "🌹 100 Hugs Coupon!",
+                "🍕 Surprise Dinner Plan!",
+                "💌 Secret Love Letter Waiting!",
+                "🎁 One Special Gift From My Heart!",
+                "📸 Memory Photo Surprise!",
+                "💍 A Forever Promise From Me ❤️"
+
+            ];
+
+            let randomGift = surprises[Math.floor(Math.random() * surprises.length)];
+
+            document.getElementById("gift-result").innerText = randomGift;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

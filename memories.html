@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/memories</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .collage {
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: radial-gradient(circle, #b3c7ff, #ccd9ff);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* COMMON FRAME STYLE */
+
+        .frame {
+
+            position: absolute;
+
+            background: rgb(234, 100, 100);
+
+            padding: 12px;
+
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, .25);
+
+            transition: .4s;
+
+            cursor: pointer;
+
+        }
+
+
+        /* IMAGE INSIDE */
+
+        .frame img {
+
+            width: 301px;
+            height: 313px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* CIRCLE STYLE */
+
+        .circle {
+
+            border-radius: 50%;
+
+        }
+
+        .circle img {
+
+            border-radius: 50%;
+
+        }
+
+
+        /* SQUARE ROTATION */
+
+        .square {
+
+            transform: rotate(-5deg);
+
+        }
+
+        .square.right {
+
+            transform: rotate(6deg);
+
+        }
+
+        .square.bottom {
+
+            transform: rotate(-8deg);
+
+        }
+
+
+        /* POSITIONS */
+
+        .left {
+
+            left: 150px;
+            top: 140px;
+
+        }
+
+        .top {
+
+            top: 80px;
+
+        }
+
+        .right {
+
+            right: 150px;
+            top: 140px;
+
+        }
+
+        .bottom {
+
+            bottom: 120px;
+
+        }
+
+        .bottom-right {
+
+            right: 220px;
+            bottom: 80px;
+
+        }
+
+
+        /* HOVER EFFECT */
+
+        .frame:hover {
+
+            transform: scale(1.08) rotate(0deg);
+
+            box-shadow: 0px 25px 55px rgba(0, 0, 0, .4);
+
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 10px;
+        }
+
+        .heart1 {
+            position: absolute;
+            right: 20px;
+            bottom: 0px;
+        }
+
+        .heart3 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            height: 78vh;
+            left: 400px;
+            bottom: 20px;
+        }
+
+        .heart img {
+            width: 500px;
+            height: auto;
+            margin-bottom: -15px;
+        }
+
+        .heart1 img {
+            width: 659px;
+            height: auto;
+            margin-bottom: -29px;
+        }
+
+        .heart3 img {
+            width: 295px;
+            height: fit-content;
+
+
+        }
+
+        .home-btn {
+            position: absolute;
+            top: 100px;
+            left: 80px;
+            z-index: 999;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            padding: 5px 5px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .home-btn:hover {
+            background-color: rgb(222, 243, 169);
+            border-radius: 20px;
+            border-radius: 2px solid black;
+            box-shadow: 0px 10px 20px black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="home-btn" onclick="window.location.href='index.html'">⬅️Home</button>
+
+    <section class="collage">
+
+        <div class="frame square left">
+            <img src="1 (1).jpg">
+        </div>
+
+        <div class="frame circle top">
+            <img src="1 (2).jpg">
+        </div>
+
+        <div class="frame square right">
+            <img src="1 (3).jpg">
+        </div>
+
+        <div class="frame square bottom">
+            <img src="1 (4).jpg">
+        </div>
+
+        <div class="frame circle bottom-right">
+            <img src="2.jpg">
+        </div>
+
+    </section>
+    <div class="heart">
+        <img src="heart.png" alt="">
+    </div>
+    <div class="heart1"><img src="heart1.png" alt="">
+    </div>
+    <div class="heart3">
+        <img src="heart3 (2).png" alt="">
+    </div>
+
+</body>
+
+</html>
